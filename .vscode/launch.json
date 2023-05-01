@@ -1,0 +1,47 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Run",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/frontend",
+        "program": "${workspaceFolder}/frontend/node_modules/.bin/vite",
+        "args": [
+          "dev"
+        ],
+        "protocol": "inspector",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+      },
+      {
+        "name": "Debug Tests",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/frontend",
+        "runtimeExecutable": "${workspaceFolder}/frontend/node_modules/.bin/vitest",
+        "args": [
+          "--inspect-brk",
+          "--watchAll",
+          "--no-cache"
+        ],
+        "protocol": "inspector",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+      },
+      {
+        "name": "Run Tests",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/frontend",
+        "program": "${workspaceFolder}/frontend/node_modules/.bin/vitest",
+        "args": [
+          "--watchAll",
+          "--no-cache"
+        ],
+        "protocol": "inspector",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+      }
+    ]
+  }

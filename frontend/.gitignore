@@ -17,6 +17,9 @@ coverage
 # Node
 package-lock.json
 
+# Auth
+auth_config.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
