@@ -14,9 +14,10 @@
   "dependencies": {
     "pinia": "^2.0.32",
     "vue": "^3.2.47",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
+    "@auth0/auth0-vue": "^2.2.0",
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/jsdom": "^21.1.0",
     "@types/node": "^18.14.2",
