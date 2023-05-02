@@ -17,6 +17,6 @@ export default (app: App): Router => (
         beforeEnter: createAuthGuard(app),
       },
     ],
-    history: createWebHistory( '/vue-auth0-example/'),
+    history: createWebHistory(),
   })
 );
