@@ -31,46 +31,6 @@ button {
   &:hover {
     background-color: $color-backgroud-btn__hover;
   }
-  
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-  }
-}
-
-input[type="file"] {
-  padding: 0.3rem 0.6rem;
-  font-size: 1rem;
-  
-  border: 1px solid $color-border;
-  color: $color-text-btn;
-  background-color: $color-backgroud-btn;
-  border-radius: 0.25rem;
-  border-radius: 0.25rem;
-
-  &::before {
-    content: 'Choose File';
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-  }
-
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-    width: 0.75rem;
-    height: 0.75rem;
-    border-right: 2px solid #333;
-    border-top: 2px solid #333;
-    transform: rotate(45deg);
-  }
 }
 
 a {

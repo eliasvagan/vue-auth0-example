@@ -7,6 +7,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), vueJsx()],
+  base: '/vue-auth0-example/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
