@@ -4,79 +4,59 @@ import UserStatus from './components/UserStatus.vue';
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/video">Video thingy</RouterLink>
-      </nav>
-      <UserStatus></UserStatus>
-    </div>
-  </header>
-  <RouterView />
+  <section class="app-wrapper">
+    <header>
+      <div>
+        <nav>
+          <RouterLink to="/">About</RouterLink>
+          <RouterLink to="/video">Video thingy</RouterLink>
+        </nav>
+        <UserStatus></UserStatus>
+      </div>
+    </header>
+    <section class="middle">
+      <RouterView />
+    </section>
+    <footer>
+      <div>
+        <p>The source for this page can be seen <a href="https://github.com/eliasvagan/vue-auth0-example">on GitHub</a></p>
+      </div>
+    </footer>
+  </section>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style scoped lang="scss">
+@import './assets/base.scss';
+section.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+section.middle {
+  display: flex;
+  flex: 1;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+header, footer {
+  background-color: $color-background-mute;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 40rem;
+  }
 }
 
 nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+  display: flex;
+  column-gap: 1.0rem;
 }
 </style>

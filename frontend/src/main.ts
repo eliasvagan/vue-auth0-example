@@ -6,7 +6,7 @@ import router from './router';
 
 import authConfig from "../auth_config.json";
 
-import './assets/main.css';
+import './assets/main.scss';
 
 const app = createApp(App);
 
